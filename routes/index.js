@@ -4,5 +4,5 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Chulnt : Framework' });
+  res.render('index', { title: 'theAvengers : The Super Heroes Framwork' });
 };
