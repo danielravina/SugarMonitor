@@ -1,10 +1,10 @@
 require.config({
 	paths: {
-		"jquery" : "lib/jquery",
+		"jquery"     : "lib/jquery",
 		"underscore" : "lib/underscore",
-		"backbone" : "lib/backbone",
-		"jquery-ui" : "lib/jquery-ui",
-		"bootstrap" : "bootstrap"
+		"backbone"   : "lib/backbone",
+		"jquery-ui"  : "lib/jquery-ui",
+		"bootstrap"  : "bootstrap"
 	}
 });
 
