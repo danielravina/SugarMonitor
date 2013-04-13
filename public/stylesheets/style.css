@@ -8,3 +8,23 @@
 	position: relative;
 	top:-3px;
 }
+
+#mySugarLevelInput{
+	width:30%;
+	font-size: 32px;
+	padding:19px;
+	height:40px;
+	border-radius: 8px;
+
+}
+
+section {
+	/*border: 1px solid #9b8994;*/
+}
+@media (max-width: 768px) {
+.affix {
+    position: relative;
+}
+a{
+	cursor:default
+}

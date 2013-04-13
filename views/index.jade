@@ -2,29 +2,55 @@ extends layout
  
 block content
 	div.container
-		h1 Sugar Monitor App
-		h2 Hi 
-			span#username
-
-		h3 Its time for your  
-			span.btn-group(id="check_time_button")
-				button#weekDay(class="btn btn-large btn-info")
-				button(class="btn dropdown-toggle btn-large btn-info", data-toggle="dropdown")
-					span.caret
-
-				ul.dropdown-menu
-					li
-						a(tabindex="-1", href="#") Action
-			| Check
 		div.row
-			div.span4
-				h3 My level:
-				input
-			div.span4
-				h3 Insulin?
-				input
-			div.span4
-				h3 Food?
-				input
-		
-	
+			div.span3
+				div#navbar
+					h3 Menu
+					ul
+						li 
+							a.sugarPrompt Home
+						li 
+							a.result Results
+						li
+							a.setting Settings
+			div.span9	
+				h1 Sugar Monitor App
+				section#sugarPrompt
+					h2 Hi 
+						span#username
+
+					h3 Its 
+						span.btn-group(id="check_time_button")
+							button#weekDay(class="btn btn-large btn-info")
+							button(class="btn dropdown-toggle btn-large btn-info", data-toggle="dropdown")
+								span.caret
+
+							ul.dropdown-menu
+								li
+									li
+										a(tabindex="-1", href="#") Before Breakfest
+									li
+										a(tabindex="-1", href="#") After Breakefest
+									li
+										a(tabindex="-1", href="#") Before Lunch
+									li
+										a(tabindex="-1", href="#") After Lunch
+									li
+										a(tabindex="-1", href="#") Before Dinner
+									li
+										a(tabindex="-1", href="#") After Dinner
+									li
+										a(tabindex="-1", href="#") Before Sleep
+									li
+										a(tabindex="-1", href="#") After Sleep
+						| time and my sugar is:
+					
+					input#mySugarLevelInput(type="text",placeholder="e.g. 5.8")
+					br
+					button(class="btn btn-success btn-large") Add
+				section#result	
+					h1 Results
+					h2 Today: 
+				section#setting
+					h1 Settings
+			
