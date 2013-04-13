@@ -4,5 +4,5 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'theAvengers : The Super Heroes Framwork' });
+  res.render('index', { title: 'Sugar Monitor' });
 };

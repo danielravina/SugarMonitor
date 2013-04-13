@@ -1,8 +1,30 @@
 extends layout
-
+ 
 block content
 	div.container
-	
-		h1 Welcome to the Avengers!
+		h1 Sugar Monitor App
+		h2 Hi 
+			span#username
 
+		h3 Its time for your  
+			span.btn-group(id="check_time_button")
+				button#weekDay(class="btn btn-large btn-info")
+				button(class="btn dropdown-toggle btn-large btn-info", data-toggle="dropdown")
+					span.caret
+
+				ul.dropdown-menu
+					li
+						a(tabindex="-1", href="#") Action
+			| Check
+		div.row
+			div.span4
+				h3 My level:
+				input
+			div.span4
+				h3 Insulin?
+				input
+			div.span4
+				h3 Food?
+				input
 		
+	

@@ -1,18 +1,44 @@
+
+
 require.config({
 	paths: {
 		"jquery"     : "lib/jquery",
 		"underscore" : "lib/underscore",
 		"backbone"   : "lib/backbone",
-		"jquery-ui"  : "lib/jquery-ui",
-		"bootstrap"  : "bootstrap"
+		"bootstrap"  : "lib/bootstrap",
+		"app"        : "app"
+	},
+
+	shim :{
+		'app':{
+        	deps :['backbone','bootstrap']
+        },
+		'backbone': {
+            deps: ['jquery','underscore']
+        },
+        'bootstrap': {
+        	deps: ['jquery']
+        }
+
 	}
 });
 
-// Example View:
-// require(['Bbviews/SampleView.js'], function(SampleView){
 
-// 	new SampleView
+require(["app"],function(){ 
+			console.log(arguments)
+			router        = new Router;
+			checkTime     = new CheckTime;
+			checkTimeView = new CheckTimeView({model : checkTime});
+			user          = new User;
+			userView      = new UserView({model: user});
+		// levelModel =  new Model();
 
-// });
+		// 	levelView  =  new View({model: levelModel});
+		
+
+		
+		$('body').fadeIn('200');
+});
+
 
 
