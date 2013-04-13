@@ -15,6 +15,21 @@ define(['backbone','underscore'],function(Bb,_){
 		}
 	});
 
+	NowView = Bb.View.extend({
+		el: $('#now'),
+
+		template: _.template("<%= format_time %>"),
+
+		initialize: function(){
+			this.render();
+		},
+
+		render: function(){
+			this.$el.prepend(this.template(this.model.toJSON()));
+			return this;
+		}
+	});
+
 	UserView = Backbone.View.extend({
 		el: $('#username'),
 
@@ -26,6 +41,7 @@ define(['backbone','underscore'],function(Bb,_){
 
 		render: function(){
 			this.$el.html(this.template(this.model.toJSON()));
+			return this;
 		}
 	});
 	
@@ -46,6 +62,7 @@ define(['backbone','underscore'],function(Bb,_){
     return {
     	UserView:UserView,
     	LevelView:LevelView,
-    	CheckTimeView:CheckTimeView 
+    	CheckTimeView:CheckTimeView,
+    	NowView:NowView
     }
 });

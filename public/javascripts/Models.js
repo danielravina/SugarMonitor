@@ -35,10 +35,10 @@ define(['backbone'],function(Bb){
 				case 10: case 11:
 					when = this.checkTimes[2];
 					break;
-				case 12: case 13:
+				case 12: case 13: case 14: case 15:
 					when = this.checkTimes[3];
 					break;
-				case 14: case 15: case 16: case 17:
+				case 16: case 17:
 					when = this.checkTimes[4];
 					break;
 				case 18: case 19: case 20:
@@ -52,8 +52,15 @@ define(['backbone'],function(Bb){
 		},
 
 		get_now: function(raw_time){
-			console.log(raw_time);
-			this.set('format_time', raw_time.getDate());
+			var monthNames = [ "January", "February", "March", "April", "May", "June",
+    				"July", "August", "September", "October", "November", "December" ];
+			var curr_date = raw_time.getDate();
+
+			var curr_month = raw_time.getMonth();
+
+			var curr_year = raw_time.getFullYear();
+
+			this.set('format_time', monthNames[curr_month] + "," + curr_date + " " + curr_year);
 		}
 	});
 	

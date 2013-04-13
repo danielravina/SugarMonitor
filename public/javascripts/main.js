@@ -38,25 +38,20 @@ require(['jquery'
 	checkTimeView = new CheckTimeView({model : checkTime});
 	user          = new User;
 	userView      = new UserView({model: user});
-
+	now           = new NowView({model: checkTime});
 	$(document).ready(function(){
 			height = window.innerHeight;
 			height = height.toString() +'px';
 			
 			
-			$('section').css('height',height);
-			$('#navbar').affix({
-	    		top: function() {
-		      		brw = $(window).width();
-		      		if (brw <= 768) alert('good;')
-		  		}
-			});
+			$('section').css('min-height',height);
+			$('#navbar').affix();
 
-		$('#navbar ul li a').click(function(){
+		$('#navbar ul li a').click(function(e){
+			e.preventDefault();
+			scroll_traget = $(this).attr('href');
 			
-			scroll_traget = $(this).attr('class');
-			
-			$.scrollTo('#'+scroll_traget, 1000)
+			$.scrollTo(scroll_traget, 1000)
 		});
 
 		$('body').fadeIn('200');

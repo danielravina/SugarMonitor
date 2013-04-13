@@ -2,55 +2,86 @@ extends layout
  
 block content
 	div.container
+		div.page-header#top
+			h1 Sugar Monitor
+				small  Stay on track
 		div.row
 			div.span3
-				div#navbar
+				div#navbar.affix-top(data-spy="affix-top")
 					h3 Menu
 					ul
 						li 
-							a.sugarPrompt Home
+							a(href="#top") Home
 						li 
-							a.result Results
+							a(href="#result") Results
 						li
-							a.setting Settings
+							a(href="#setting") Settings
 			div.span9	
-				h1 Sugar Monitor App
-				section#sugarPrompt
-					h2 Hi 
-						span#username
+				section
+					div.hero-unit#sugarPrompt
+						h1#hi Hi 
+							span#username
+						br
+						h3 Its 
+							span.btn-group(id="check_time_button")
+								button#weekDay(class="btn btn-large btn-info")
+								button(class="btn dropdown-toggle btn-large btn-info", data-toggle="dropdown")
+									span.caret
 
-					h3 Its 
-						span.btn-group(id="check_time_button")
-							button#weekDay(class="btn btn-large btn-info")
-							button(class="btn dropdown-toggle btn-large btn-info", data-toggle="dropdown")
-								span.caret
-
-							ul.dropdown-menu
-								li
+								ul.dropdown-menu
 									li
-										a(tabindex="-1", href="#") Before Breakfest
-									li
-										a(tabindex="-1", href="#") After Breakefest
-									li
-										a(tabindex="-1", href="#") Before Lunch
-									li
-										a(tabindex="-1", href="#") After Lunch
-									li
-										a(tabindex="-1", href="#") Before Dinner
-									li
-										a(tabindex="-1", href="#") After Dinner
-									li
-										a(tabindex="-1", href="#") Before Sleep
-									li
-										a(tabindex="-1", href="#") After Sleep
-						| time and my sugar is:
-					
-					input#mySugarLevelInput(type="text",placeholder="e.g. 5.8")
-					br
-					button(class="btn btn-success btn-large") Add
-				section#result	
-					h1 Results
-					h2 Today: 
+										li
+											a(tabindex="-1", href="#") Before Breakfest
+										li
+											a(tabindex="-1", href="#") After Breakefest
+										li
+											a(tabindex="-1", href="#") Before Lunch
+										li
+											a(tabindex="-1", href="#") After Lunch
+										li
+											a(tabindex="-1", href="#") Before Dinner
+										li
+											a(tabindex="-1", href="#") After Dinner
+										li
+											a(tabindex="-1", href="#") Before Sleep
+										li
+											a(tabindex="-1", href="#") After Sleep
+							| time and your sugar is:
+						
+						input#mySugarLevelInput(type="text",placeholder="e.g. 5.8")
+						span.add-on  mmol/L
+						br
+						br
+						button(class="btn btn-success btn-large") Move on with my day
+				section#result
+					div.hero-unit	
+						h1 Results
+						ul.nav.nav-pills
+							li.active
+								a(href="#") Today
+							li
+								a(href="#") Weekly
+							li
+								a(href="#") Monthly
+						h3#now
+						table.table
+							tr
+								th Time
+								th Level
+								th Insulin
+							tr
+								td Before Breakefest
+								td 5.8
+								td 2
+							tr
+								td After Breakefest
+								td 7.8
+								td None
+							tr
+								td Before Lunch
+								td 9.1
+								td 12
 				section#setting
-					h1 Settings
+					div.hero-unit
+						h1 Settings
 			
