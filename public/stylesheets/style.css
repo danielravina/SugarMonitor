@@ -10,10 +10,10 @@
 }
 
 #mySugarLevelInput{
-	width:80%;
-	font-size: 32px;
-	padding:19px;
-	height:40px;
+	width:10%;
+	font-size: 1.2em;
+	text-align: center;
+	height:45px;
 	border-radius: 8px;
 
 }

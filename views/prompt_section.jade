@@ -1,0 +1,36 @@
+section
+	div.hero-unit#sugarPrompt
+		h1#hi Hi 
+			span#username
+		br
+		h3 Its 
+			span.btn-group(id="check_time_button")
+				button#checkTimeSelect(class="btn btn-large btn-info")
+				button(class="btn dropdown-toggle btn-large btn-info", data-toggle="dropdown")
+					span.caret
+
+				ul.dropdown-menu
+					li
+						li
+							a(tabindex="-1", href="#") Before Breakfest
+						li
+							a(tabindex="-1", href="#") After Breakefest
+						li
+							a(tabindex="-1", href="#") Before Lunch
+						li
+							a(tabindex="-1", href="#") After Lunch
+						li
+							a(tabindex="-1", href="#") Before Dinner
+						li
+							a(tabindex="-1", href="#") After Dinner
+						li
+							a(tabindex="-1", href="#") Before Sleep
+						li
+							a(tabindex="-1", href="#") After Sleep
+			| time. 
+		
+		h3 Your sugar is: 
+			input#mySugarLevelInput(type="text",maxlength="4")
+			span.add-on  mmol/L
+		br
+		button(class="btn btn-success btn-large") Move on with your day
