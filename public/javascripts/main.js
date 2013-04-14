@@ -13,23 +13,23 @@ require.config({
 			deps: ['jquery', 'backbone', 'underscore','bootstrap','scrollTo']
 		},
 		'backbone': {
-            deps: ['jquery','underscore']
-        },
-        'bootstrap': {
-        	deps: ['jquery']
-        },
-        'scrollTo' : {
-        	deps: ['jquery']
-        }
+			deps: ['jquery','underscore']
+		},
+		'bootstrap': {
+			deps: ['jquery']
+		},
+		'scrollTo' : {
+			deps: ['jquery']
+		}
 	}
 });
 
 require(['views/AppView',
-		 'views/NavBarView',
-		 'views/CheckTimeSelect'], function() {
+	'views/NavBarView',
+	'views/CheckTimeSelect'], function() {
 
-	new AppView();
-});
+		new AppView();
+	});
 
 
 
