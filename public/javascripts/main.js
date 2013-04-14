@@ -24,11 +24,15 @@ require.config({
 	}
 });
 
-require(['views/AppView',
-	'views/NavBarView',
-	'views/CheckTimeSelect'], function() {
+require([
+	'views/App',
+	'views/NavBar',
+	'views/CheckTimeSelect',
+	'views/Greetings',
+	'views/PromptSection'
+	], function() {
 
-		new AppView();
+		new App();
 	});
 
 

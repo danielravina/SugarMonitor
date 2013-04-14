@@ -1,37 +1,28 @@
-define([dependencies], function(params) {
-   
-	NavBar = Backbone.View.extend({
+define(['jquery','underscore','backbone','bootstrap','scrollTo'], 
+	function($,_,Backbone,scrollTo,Bootstrap) {
+		
+		NavBarView = Backbone.View.extend({
+			el: "#navbar",
 
-		initialize:function(options){
-			Backbone.history.on('route',function(source, path){
-				this.render(path);
-			}, this);
+		initialize:function(){
+			// _.bindAll(this, 'markActive');	
+			console.log('navBar!');
+			this.$el.affix();
 		},
-		//This is a collection of possible routes and their accompanying
-		//user-friendly titles
-		titles: {
-			"":"Home",
-			"results":"Adventure",
-			"contact":"Contact"
+
+		events: {
+			'click ul li a' : 'scroll'
 		},
-		events:{
-			'click a':function(source) {
-				var hrefRslt = source.target.getAttribute('href');
-				Backbone.history.navigate(hrefRslt, {trigger:true});
-		//Cancel the regular event handling so that we won't actual change URLs
-		//We are letting Backbone handle routing
-		return false;
-		}
+
+		scroll:function(e){
+			e.preventDefault();
+			target_scroll = e.target.getAttribute('href');
+			
+			$(document).scrollTo(target_scroll,1000);
+			history.replaceState(null, '', target_scroll);
 		},
-		//Each time the routes change, we refresh the navigation
-		//items.
-		render:function(route){
-			this.$el.empty();
-			var template = _.template("<li class='<%=active%>'><a href='<%=url%>'><%=visible%></a></li>");
-			for (var key in this.titles)
-			{
-				this.$el.append(template({url:key,visible:this.titles[key],active:route === key ? 'active' : ''}));
-			}
-		}
+
 	});
-});
+
+		return new NavBarView;
+	});

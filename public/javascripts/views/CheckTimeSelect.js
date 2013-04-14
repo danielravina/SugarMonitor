@@ -9,7 +9,6 @@ define(['backbone','underscore','models/CheckTime'], function() {
 
 		initialize: function(){
 			this.render();
-			console.log(this.model);
 		},
 
 		render: function(){

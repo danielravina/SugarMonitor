@@ -1,11 +1,23 @@
 define(['backbone'], function(Backbone) {
 	
-	app.Router = Backbone.Router.extend({
+	Router = Backbone.Router.extend({
 		initialize : function(){
 			console.log('router!');
+			Backbone.history.start();
+		},
+	
+		routes: {
+			'top': 'index',
+			'result': 'result'
+		},
+
+		index:function(){
+			console.log('index');
+		},
+		result:function(){
+			console.log('result');
 		}
 	});
 
-
-	return Router; 
+	return new Router; 
 });

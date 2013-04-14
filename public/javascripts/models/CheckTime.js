@@ -13,22 +13,22 @@ define(['backbone'], function() {
 				case 6: case 7:
 					chkTime = 'Before Breakefest';
 					break;
-				case 8:case 9:
+				case 8:case 9: case 10:
 					chkTime = 'After Breakfest';
 					break;
-				case 10: case 11:
+				case 11: case 12: case 13:
 					chkTime = 'Before Lunch';
 					break;
-				case 12: case 13: case 14: case 15:
+				case 14: case 15:
 					chkTime = 'After Lunch';
 					break;
-				case 16: case 17:
+				case 16: case 17: case 18:
 					chkTime = 'Before Dinner';
 					break;
-				case 18: case 19: case 20:
+				case 19: case 20: case 21:
 					chkTime = 'After Dinner';
 					break;
-				case 21: case 22: case 23:
+				case 22: case 23:
 					chkTime = 'Before Sleep';
 			}
 

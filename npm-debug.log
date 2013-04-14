@@ -1,0 +1,48 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'r' ]
+2 info using npm@1.2.15
+3 info using node@v0.10.2
+4 verbose read json /Users/danielravina/code/sugarMonitor/package.json
+5 verbose read json /Users/danielravina/code/sugarMonitor/node_modules/express/package.json
+6 verbose read json /Users/danielravina/code/sugarMonitor/node_modules/jade/package.json
+7 verbose read json /Users/danielravina/code/sugarMonitor/node_modules/nodemon/package.json
+8 verbose from cache /Users/danielravina/code/sugarMonitor/package.json
+9 verbose readDependencies using package.json deps
+10 verbose cache add [ 'r', null ]
+11 verbose cache add name=undefined spec="r" args=["r",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'r',
+12 verbose parsed url   path: 'r',
+12 verbose parsed url   href: 'r' }
+13 silly lockFile 4dc7c9ec-r r
+14 verbose lock r /Users/danielravina/.npm/4dc7c9ec-r.lock
+15 silly lockFile 4dc7c9ec-r r
+16 verbose addNamed [ 'r', '' ]
+17 verbose addNamed [ null, '' ]
+18 silly lockFile 7f93b94c-r r@
+19 verbose lock r@ /Users/danielravina/.npm/7f93b94c-r.lock
+20 silly lockFile 7f93b94c-r r@
+21 error Error: EACCES, open '/Users/danielravina/.npm/7f93b94c-r.lock'
+21 error  { [Error: EACCES, open '/Users/danielravina/.npm/7f93b94c-r.lock']
+21 error   errno: 3,
+21 error   code: 'EACCES',
+21 error   path: '/Users/danielravina/.npm/7f93b94c-r.lock' }
+22 error Please try running this command again as root/Administrator.
+23 error System Darwin 12.3.0
+24 error command "node" "/usr/local/bin/npm" "install" "r"
+25 error cwd /Users/danielravina/code/sugarMonitor
+26 error node -v v0.10.2
+27 error npm -v 1.2.15
+28 error path /Users/danielravina/.npm/7f93b94c-r.lock
+29 error code EACCES
+30 error errno 3
+31 error stack Error: EACCES, open '/Users/danielravina/.npm/7f93b94c-r.lock'
+32 verbose exit [ 3, true ]
