@@ -4,8 +4,11 @@
 
 var express = require('express')
   , routes = require('./routes')
+  , mongoose = require('mongoose')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , User = require('./models/User')
+  , Level = require('./models/Level');
 
 var app = express();
 
@@ -21,9 +24,14 @@ app.configure(function(){
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
+mongoose.connect("mongodb://localhost/sugarMonitor");
+
+
+
 app.configure('development', function(){
   app.use(express.errorHandler());
 });
+
 
 app.get('/', routes.index);
 

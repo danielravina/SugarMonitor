@@ -4,17 +4,22 @@ block content
 	div.container
 		div.page-header
 			h1 Sugar Monitor
-				small  Stay on track
+				small  
+					i Stay on track
 		div.row
 			div.span3
-				div#navbar.affix-top(data-spy="affix-top")
+				div#navbar
 					h3 Menu
 					ul
-						li
+						li.active
+							i.icon-home  
 							a(href="#top") Home
 						li 
-							a(href="#result") Results
+							i.icon-book    
+							a(href="#result") Quick Reports
+								
 						li
+							i.icon-cogs  
 							a(href="#setting") Settings
 			div.span9	
 				include prompt_section

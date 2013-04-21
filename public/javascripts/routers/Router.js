@@ -1,4 +1,4 @@
-define(['backbone'], function(Backbone) {
+define(['backbone','collections/Levels'], function(Backbone) {
 	
 	Router = Backbone.Router.extend({
 		initialize : function(){
@@ -19,5 +19,8 @@ define(['backbone'], function(Backbone) {
 		}
 	});
 
+	// make a collection which can be used for multiple views
+	
+	Router.Levels = new Levels();  
 	return new Router; 
 });

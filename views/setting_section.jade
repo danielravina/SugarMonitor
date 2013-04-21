@@ -1,3 +1,101 @@
-section#setting
-	div.hero-unit
-		h1 Settings
+section
+	div.top
+		a(href="") Top  
+			i.icon-double-angle-up
+	div.hero-unit#setting
+		
+		h1 
+			i.icon-cogs 
+			| Settings
+		ul.nav.nav-pills
+			li.active
+				a(href="", data-toggle="tab") My Diabetes
+			li
+				a(href="", data-toggle="tab") My Doctor
+			li
+				a(href="", data-toggle="tab") General
+
+		div#setting_form
+			div.row
+
+				div.span3
+					
+					h4 
+						i.icon-user-md 
+						| Doctor's Name:
+					input(type="text", id="doctor_name")
+				div.span3
+					h4 Doctor's Email:
+					input(type="email", id="doctor_name")
+			div.row
+
+
+			div(class="alert alert-info") 
+				strong Notice: 
+				| Please consult your doctor before filling this up
+				div.row
+					div.span3
+						h4 Insulin Type:
+						select
+							option Insulin Type
+							option Fast-acting
+							option Short-acting (Regular)
+							option NPH
+							option Premixed 30/70 
+							option Long-acting (Levemir)
+							option Long-acting (Lantus)
+
+					div.span3
+						h4 Dosage:
+						input(type="number")
+				div.row
+					div.span3
+					div.span3
+						h4 Time:
+						select
+							option Before Breakfest
+							option After Breakefest
+							option Before Lunch
+							option After Lunch
+							option Before Dinner
+							option After Dinner
+							option Before Sleep
+							option After Sleep
+				div.row
+					div.span3
+						h4 Oral Medications:
+						select
+							option  Oral Medications
+							option	Metformin
+							option	Glyburide
+							option	Avandia
+							option	Actos
+							option	Januvia
+							option	Acarbose
+							option	Avandamet
+					div.span3
+						h4 Dosage:
+						input(type="text")
+							
+				div.row
+					div.span3
+					div.span3
+						h4 Frequency:
+						select
+							option  Once a day
+							option  Twice a day
+							option  3 Times a day
+							option  4 Times a day
+							option  5 Times a day+
+				div.row
+					div.span3
+						h4 Correction Factor 
+							small
+								a#c_factor(href="") 
+									|[what is this?]  
+								i.icon-question-sign  
+						input.input-small(type="number",placeholder="Units")
+						|  to 
+						input.input-small(type="number",placeholder="mmol")
+		button(class="btn btn-primary btn-large") Save				
+						

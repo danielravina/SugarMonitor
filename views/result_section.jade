@@ -1,28 +1,22 @@
 section#result
+	div.top
+		a(href="") Top  
+			i.icon-double-angle-up
+
 	div.hero-unit	
-		h1 Results
+		h1
+			i.icon-book 
+				| Quick Reports
 		ul.nav.nav-pills
 			li.active
-				a(href="#") Today
+				a(href="", data-toggle="tab") Today
 			li
-				a(href="#") Weekly
+				a(href="", data-toggle="tab") Weekly
 			li
-				a(href="#") Monthly
+				a(href="", data-toggle="tab") Statistics
 		h3#now
-		table.table
+		table.table#levelsTable
 			tr
 				th Time
 				th Level
 				th Insulin
-			tr
-				td Before Breakefest
-				td 5.8
-				td 2
-			tr
-				td After Breakefest
-				td 7.8
-				td None
-			tr
-				td Before Lunch
-				td 9.1
-				td 12

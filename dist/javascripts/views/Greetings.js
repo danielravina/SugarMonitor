@@ -1,0 +1,1 @@
+define(["backbone","underscore","models/User"],function(){return Greetings=Backbone.View.extend({el:"#greetings",initialize:function(){this.render()},render:function(){return this.$el.append(this.model.get("name")),this}}),new Greetings({model:new User})});

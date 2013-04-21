@@ -25,11 +25,12 @@ require.config({
 });
 
 require([
+	'routers/Router',
 	'views/App',
 	'views/NavBar',
-	'views/CheckTimeSelect',
 	'views/Greetings',
-	'views/PromptSection'
+	'views/PromptSection',
+	'views/LevelsTable'
 	], function() {
 
 		new App();

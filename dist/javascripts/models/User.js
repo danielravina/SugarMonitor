@@ -1,0 +1,1 @@
+define(["backbone"],function(){return User=Backbone.Model.extend({initialize:function(){this.assign_user()},defaults:{name:"Guest"},assign_user:function(){localStorage.user?this.set("name",localStorage.user):(name=prompt("Hi! What's your name?"),this.set("name",name),localStorage.user=name)}}),User});
